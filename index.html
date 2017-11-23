@@ -188,6 +188,10 @@
         font-size: 150px;
     }
   }
+  #map {
+  	height: 400px;
+  	width: 100%;
+  }
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -310,7 +314,7 @@
       <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-envelope"></span>contact@jestar.com</p>
 	  <p>Seongo-ro 89beonga-gil, Bucheon-si, Gyeonggi-do, Republic of Korea</p>
-	  <p>Map..</p>
+      <div id="map"></div>
     </div>
   </div>
 </div>
@@ -322,8 +326,21 @@
   <p>Copyright © 2017</p>
 </footer>
 
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADiyzFzKS5ZqzUWPO1NUEtaH1oY68muok&callback=initMap">
+</script>
 <script>
-
+function initMap() {
+   	var uluru = {lat: 37.527770, lng: 126.793551};
+   	var map = new google.maps.Map(document.getElementById('map'), {
+     		zoom: 13,
+     		center: uluru
+   	});
+   	var marker = new google.maps.Marker({
+   		position: uluru,
+     		map: map
+   	});
+}
 </script>
 
 </body>
