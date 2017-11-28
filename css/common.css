@@ -1,4 +1,4 @@
-body {
+  body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
@@ -174,8 +174,4 @@ body {
     .logo {
         font-size: 150px;
     }
-  }
-  #map {
-  	height: 400px;
-  	width: 100%;
   }
